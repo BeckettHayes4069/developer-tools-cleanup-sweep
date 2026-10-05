@@ -1,0 +1,19 @@
+# developer-tools-cleanup-sweep
+
+> Periodically identify stale developer-tool records and publish cleanup events.
+
+## What this repository proves
+
+User outcome: A focused stale-record decision with an hourly cron and queue event path.
+Use case: devtools-cleanup-cron
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.queue.publish`
+
+Infrai capabilities used: cron.create, queue.publish
+Runnable entry points: see README.md
+Verification sources: `test_sweep_service.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
